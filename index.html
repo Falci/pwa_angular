@@ -23,6 +23,14 @@
     ga('create', 'UA-2568035-34', 'auto');
     ga('send', 'pageview');
 
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('./service-worker.js')
+        .then(function() {
+          console.log('Service Worker Registered');
+        });
+    }
+
   </script>
 
   <header class="header">
