@@ -42,7 +42,8 @@ function gitCard($http) {
     restrict: 'E',
     templateUrl: 'git-card.html',
     scope: {
-      user: '='
+      user: '=',
+      remove: '&'
     },
     link: function(scope) {
       $http.get('https://api.github.com/users/' + scope.user)
@@ -62,8 +63,14 @@ function MainController(GitService) {
   var vm = this;
 
   vm.submit = submit;
+  vm.remove = remove;
   vm.user = '';
   vm.users = GitService.getAll();
+
+  function remove(user) {
+    console.log('main remove')
+    GitService.remove(user);
+  }
 
   function submit() {
     GitService.add(vm.user);

@@ -24,7 +24,7 @@
     ga('send', 'pageview');
 
   </script>
-  
+
   <header class="header">
     <h1 class="header__title">Github Cardboard</h1>
   </header>
@@ -40,7 +40,7 @@
       </form>
     </div>
 
-    <git-card user="user" ng-repeat="user in main.users"></git-card>
+    <git-card user="user" ng-repeat="user in main.users" remove="main.remove(user);"></git-card>
   </div>
 
 </body>
