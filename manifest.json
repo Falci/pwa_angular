@@ -1,0 +1,17 @@
+{
+    "name": "Github Cardboard",
+    "short_name": "Github Cardboard",
+    "icons": [ {
+        "src": "images/icons/github-144x144.png",
+        "sizes": "144x144",
+        "type": "image/png"
+    }],
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#3E4EB8",
+    "theme_color": "#2F3BA2",
+    "prefer_related_applications": true,
+    "related_applications": [{
+        "platform": "web"
+    }]
+}

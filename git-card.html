@@ -1,0 +1,12 @@
+<div class="card cardTemplate githubuser">
+  <div class="location">{{data.name}}</div>
+  <div class="current">
+    <div class="visual">
+      <div ><img class="icon" ng-src="{{data.avatar_url}}"/></div>
+    </div>
+    <div class="description">
+      <div class="humidity">{{data.bio}}</div>
+    </div>
+  </div>
+  <button class='mui-btn mui-btn--raised' ng-click="remove()">remove</button>
+</div>

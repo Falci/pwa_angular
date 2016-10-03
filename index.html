@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Github User</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="manifest" href="manifest.json">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-local-storage/0.5.0/angular-local-storage.min.js"></script>
+  <script src="scripts/script.js"></script>
+
+</head>
+<body>
+  <header class="header">
+    <h1 class="header__title">Github Cardboard</h1>
+  </header>
+
+  <main class="main">
+  <div id="root" ng-controller="MainController as main">
+    <div class='mui-panel'>
+      <form ng-submit="main.submit()">
+        <div class='mui-textfield'>
+          <input placeholder='Github Login' ng-model="main.user"></input>
+        </div>
+        <button class='mui-btn mui-btn--raised'>add</button>
+      </form>
+    </div>
+
+    <git-card user="user" ng-repeat="user in main.users"></git-card>
+  </div>
+
+</body>
+</html>
